@@ -9,11 +9,22 @@
     "type": "git",
     "url": "https://github.com/NUKnightLab/juxtapose.git"
   },
+  "main": "index.js",
+  "directories": {
+    "lib": "juxtapose",
+    "example": "example"
+  },
+  "types": "index.d.ts",
+  "typings": "index.d.ts",
   "files": [
+    "index.js",
+    "index.d.ts",
+    "juxtapose",
     "build/css/juxtapose.css",
     "build/js/juxtapose.js",
     "build/js/juxtapose.min.js",
-    "README.md"
+    "README.md",
+    "!juxtapose/embed"
   ],
   "keywords": [
     "image",
