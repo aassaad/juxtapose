@@ -1,2 +1,2 @@
-export * from './juxtapose/js/juxtapose';
+export import juxtapose = require('./juxtapose/js/juxtapose')
 
