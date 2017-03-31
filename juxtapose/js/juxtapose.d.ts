@@ -91,9 +91,11 @@ export interface JXSlider {
   controller?: HTMLDivElement;
 }
 
-export interface juxtapose {
+export interface Juxtapose {
   JXSlider: JXSlider;
   sliders: JXSlider[];
   makeSlider(element: HTMLElement, idx?: number): void;
   scanPage(): void;
 }
+
+declare var juxtapose: Juxtapose;
