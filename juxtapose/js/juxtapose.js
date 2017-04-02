@@ -8,6 +8,8 @@ var juxtapose = {
   OPTIMIZATION_WAS_CONSTRAINED: 2
 };
 
+juxtapose.JXSlider = JXSlider;
+
 var flickr_key = "d90fc2d1f4acc584e08b8eaea5bf4d6c";
 var FLICKR_SIZE_PREFERENCES = ['Large', 'Medium'];
 
@@ -660,7 +662,7 @@ juxtapose.makeSlider = function (element, idx) {
     w.innerText = '';
   }
 
-  slider = new juxtapose.JXSlider(
+  var slider = new juxtapose.JXSlider(
     selector,
     [
       {
@@ -676,6 +678,7 @@ juxtapose.makeSlider = function (element, idx) {
     ],
     options
   );
+  juxtapose.sliders.push(slider);
 };
 
 //Enable HTML Implementation
@@ -685,7 +688,5 @@ juxtapose.scanPage = function() {
     juxtapose.makeSlider(elements[i], i);
   }
 };
-
-juxtapose.JXSlider = JXSlider;
-
+window.juxtapose = juxtapose;
 module.exports = juxtapose;
